@@ -28,17 +28,35 @@ We also took into account a Common directory for:
 # Plugins used in the project
 - flutter_bloc
 - lottie
-- local_auth
 - dio
 - cupertino_icons
 - equatable
 - flutter_native_splash
+- flutter_dotenv
+- url_launcher
+- flutter_launcher_icons
+- audioplayers
 
 # Login
+For the login view, we thought of implementing a dummy login in order to
+generate a more immersive experience to a complete system. more immersive
+experience to a complete system by adding the classic show song.
+We also make use of a dummy credentials which you can set to your liking
+through a .env, for more example you can see it in the .env.template file.
 
-For the login view, we thought to implement a fictitious login in order to generate a
-more immersive experience to a complete system, we also added biometric authentication
-(only through fingerprint).
+# Home
+Added 2 buttons to navigate between characters and episodes of the series.
+Very minimalistic
+
+# Characters
+In this view you can filter and search for detailed character information
+such as name, status (alive or dead in the series), species and other data.
+We tried to make a card simulating an identity card for each character.
+
+# Episodes
+In this view I used the data as the name of the episode, its label
+(season - episode) and I added a link that redirects to the page to watch
+the episode online.
 
 ## Getting Started
 
