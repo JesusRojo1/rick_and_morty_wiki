@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:rick_and_morty_show/routes.dart';
 import 'package:rick_and_morty_show/ui/characters/blocs/characters_bloc.dart';
 import 'package:rick_and_morty_show/ui/characters/providers/api_provider.dart';
@@ -11,8 +10,6 @@ import 'package:rick_and_morty_show/ui/login/screens/login_screen.dart';
 
 Future<void> main() async {
   await dotenv.load(fileName: ".env");
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(
     MultiBlocProvider(
       providers: [
@@ -26,7 +23,6 @@ Future<void> main() async {
       child: const MyApp(),
     ),
   );
-  FlutterNativeSplash.remove();
 }
 
 class MyApp extends StatelessWidget {
